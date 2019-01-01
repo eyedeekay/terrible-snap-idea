@@ -93,7 +93,6 @@ parts:
     make-parameters:
       - DESTDIR=$SNAPCRAFT_PART_INSTALL
       - install
-      - install-fix
     stage:
       - .
     prime:
@@ -104,6 +103,7 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
+      - "-f $SNAPCRAFT_PART_INSTALL/etc/whobrowser/Makefile"
       - DESTDIR=$SNAPCRAFT_PART_INSTALL
       - install
     stage:
@@ -117,6 +117,7 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
+      - "-f $SNAPCRAFT_PART_INSTALL/etc/whobrowser/Makefile"
       - DESTDIR=$SNAPCRAFT_PART_INSTALL
       - install
     stage:
@@ -130,6 +131,7 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
+      - "-f $SNAPCRAFT_PART_INSTALL/etc/whobrowser/Makefile"
       - DESTDIR=$SNAPCRAFT_PART_INSTALL
       - install
     stage:
@@ -143,6 +145,7 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
+      - "-f $SNAPCRAFT_PART_INSTALL/etc/whobrowser/Makefile"
       - DESTDIR=$SNAPCRAFT_PART_INSTALL
       - install
     stage:
@@ -156,6 +159,7 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
+      - "-f $SNAPCRAFT_PART_INSTALL/etc/whobrowser/Makefile"
       - DESTDIR=$SNAPCRAFT_PART_INSTALL
       - install
     stage:
@@ -169,6 +173,7 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
+      - "-f $SNAPCRAFT_PART_INSTALL/etc/whobrowser/Makefile"
       - DESTDIR=$SNAPCRAFT_PART_INSTALL
       - install
     stage:
