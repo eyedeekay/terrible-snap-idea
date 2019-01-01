@@ -1,0 +1,168 @@
+name: whobrowser
+version: '0.0.01'
+summary: Snapped Downloader+Starter for Tor Browser and i2p Browser
+base: core18
+description: |
+  A highly experimental snapped version of Tor Browser and i2p Browser.
+
+apps:
+  update-torbrowser:
+    command: desktop-launch $SNAP/usr/bin/update-torbrowser --devbuildpassthrough
+    plugs:
+      - network
+      - desktop
+      - desktop-legacy
+      - home
+      - x11
+      - wayland
+      - mir
+      - browser-support
+      - pulseaudio
+      - alsa
+  update-i2pbrowser:
+    command: desktop-launch $SNAP/usr/bin/update-i2pbrowser --devbuildpassthrough
+    plugs:
+      - network
+      - desktop
+      - desktop-legacy
+      - home
+      - x11
+      - wayland
+      - mir
+      - browser-support
+      - pulseaudio
+      - alsa
+  torbrowser:
+    command: desktop-launch $SNAP/usr/bin/torbrowser
+    desktop: usr/share/applications/janondisttorbrowser.desktop
+    plugs:
+      - network
+      - desktop
+      - desktop-legacy
+      - home
+      - x11
+      - wayland
+      - mir
+      - browser-support
+      - pulseaudio
+      - alsa
+  i2pbrowser:
+    command: desktop-launch $SNAP/usr/bin/i2pbrowser
+    plugs:
+      - network
+      - desktop
+      - desktop-legacy
+      - home
+      - x11
+      - wayland
+      - mir
+      - browser-support
+      - pulseaudio
+      - alsa
+
+grade: stable
+confinement: strict
+
+parts:
+  genmkfile:
+    source: https://github.com/Whonix/genmkfile.git
+    source-subdir: "."
+    plugin: make
+    make-parameters:
+        - DESTDIR=$SNAPCRAFT_PART_INSTALL
+        - install
+    stage:
+      - .
+    prime:
+      - .
+    stage-packages:
+      - debhelper
+      - devscripts
+      - make
+      - dpkg-dev
+      - fakeroot
+      - strip-nondeterminism
+      - sudo
+      - perl
+  msgcollector:
+    source: https://github.com/Whonix/msgcollector.git
+    source-subdir: "."
+    plugin: make
+    make-parameters:
+        - DESTDIR=$SNAPCRAFT_PART_INSTALL
+        - install
+    stage:
+      - .
+    prime:
+      - .
+  msgcollector:
+    source: https://github.com/Whonix/anon-icon-pack.git
+    source-subdir: "."
+    plugin: make
+    make-parameters:
+        - DESTDIR=$SNAPCRAFT_PART_INSTALL
+        - install
+    stage:
+      - .
+    prime:
+      - .
+  tb-updater:
+    after: [desktop-gtk3]
+    source: https://github.com/Whonix/tb-updater.git
+    source-subdir: "."
+    plugin: make
+    make-parameters:
+        - DESTDIR=$SNAPCRAFT_PART_INSTALL
+        - install
+    stage:
+      - .
+    prime:
+      - .
+  tb-starter:
+    after: [desktop-gtk3]
+    source: https://github.com/Whonix/tb-starter.git
+    source-subdir: "."
+    plugin: make
+    make-parameters:
+        - DESTDIR=$SNAPCRAFT_PART_INSTALL
+        - install
+    stage:
+      - .
+    prime:
+      - .
+  tb-default-browser:
+    after: [desktop-gtk3]
+    source: https://github.com/Whonix/tb-default-browser.git
+    source-subdir: "."
+    plugin: make
+    make-parameters:
+        - DESTDIR=$SNAPCRAFT_PART_INSTALL
+        - install
+    stage:
+      - .
+    prime:
+      - .
+  open-link-confirmation:
+    after: [desktop-gtk3]
+    source: https://github.com/Whonix/open-link-confirmation.git
+    source-subdir: "."
+    plugin: make
+    make-parameters:
+        - DESTDIR=$SNAPCRAFT_PART_INSTALL
+        - install
+    stage:
+      - .
+    prime:
+      - .
+  #whobrowser:
+    #after: [desktop-gtk3]
+    #source: https://github.com/eyedeekay/terrible-snap-idea.git
+    #source-subdir: "."
+    #plugin: make
+    #make-parameters:
+      #- DESTDIR=$SNAPCRAFT_PART_INSTALL
+      #- install
+    #stage:
+      #- .
+    #prime:
+      #- .
