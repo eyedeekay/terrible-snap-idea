@@ -82,6 +82,7 @@ parts:
       - dpkg-dev
       - fakeroot
       - strip-nondeterminism
+      - sudo
       - perl
   msgcollector:
     source: https://github.com/Whonix/msgcollector.git
