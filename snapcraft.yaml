@@ -1,5 +1,5 @@
 name: whobrowser
-version: '0.0.01'
+version: '0.01a'
 summary: Snapped Downloader+Starter for Tor Browser and i2p Browser
 base: core18
 description: |
