@@ -69,8 +69,8 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
-        - DESTDIR=$SNAPCRAFT_PART_INSTALL
-        - install
+      - DESTDIR=$SNAPCRAFT_PART_INSTALL
+      - install
     stage:
       - .
     prime:
@@ -88,19 +88,19 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
-        - DESTDIR=$SNAPCRAFT_PART_INSTALL
-        - install
+      - DESTDIR=$SNAPCRAFT_PART_INSTALL
+      - install
     stage:
       - .
     prime:
       - .
-  msgcollector:
+  anon-icon-pack:
     source: https://github.com/Whonix/anon-icon-pack.git
     source-subdir: "."
     plugin: make
     make-parameters:
-        - DESTDIR=$SNAPCRAFT_PART_INSTALL
-        - install
+      - DESTDIR=$SNAPCRAFT_PART_INSTALL
+      - install
     stage:
       - .
     prime:
@@ -111,8 +111,8 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
-        - DESTDIR=$SNAPCRAFT_PART_INSTALL
-        - install
+      - DESTDIR=$SNAPCRAFT_PART_INSTALL
+      - install
     stage:
       - .
     prime:
@@ -123,8 +123,8 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
-        - DESTDIR=$SNAPCRAFT_PART_INSTALL
-        - install
+      - DESTDIR=$SNAPCRAFT_PART_INSTALL
+      - install
     stage:
       - .
     prime:
@@ -135,8 +135,8 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
-        - DESTDIR=$SNAPCRAFT_PART_INSTALL
-        - install
+      - DESTDIR=$SNAPCRAFT_PART_INSTALL
+      - install
     stage:
       - .
     prime:
@@ -147,8 +147,8 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
-        - DESTDIR=$SNAPCRAFT_PART_INSTALL
-        - install
+      - DESTDIR=$SNAPCRAFT_PART_INSTALL
+      - install
     stage:
       - .
     prime:
