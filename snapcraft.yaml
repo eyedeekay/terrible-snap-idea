@@ -154,15 +154,15 @@ parts:
       - .
     prime:
       - .
-  #whobrowser:
-    #after: [desktop-gtk3]
-    #source: https://github.com/eyedeekay/terrible-snap-idea.git
-    #source-subdir: "."
-    #plugin: make
-    #make-parameters:
-      #- DESTDIR=$SNAPCRAFT_PART_INSTALL
-      #- install
-    #stage:
-      #- .
-    #prime:
-      #- .
+  whobrowser:
+    after: [desktop-gtk3]
+    source: https://github.com/eyedeekay/terrible-snap-idea.git
+    source-subdir: "."
+    plugin: make
+    make-parameters:
+      - DESTDIR=$SNAPCRAFT_PART_INSTALL
+      - install
+    stage:
+      - .
+    prime:
+      - .

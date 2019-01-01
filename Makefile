@@ -11,5 +11,13 @@ copy-snap:
 	docker cp snapbuild:/home/snap/snap/whobrowser_$(VERSION)_amd64.snap whobrowser_$(VERSION)_amd64.snap
 	docker rm -f snapbuild
 
-install:
+install-deb:
 	apt-get install -y ./*.deb
+
+GENMKFILE_PATH ?= /usr/share/genmkfile
+GENMKFILE_ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+
+export GENMKFILE_PATH
+export GENMKFILE_ROOT_DIR
+
+include $(GENMKFILE_PATH)/makefile-full
