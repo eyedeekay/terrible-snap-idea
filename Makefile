@@ -1,6 +1,8 @@
 
 SNAP_VERSION=0.0.01
 
+DESTDIR ?= /usr
+
 build:
 	docker build -f Dockerfile -t eyedeekay/whobrowser .
 	make copy-snap
@@ -21,3 +23,8 @@ export GENMKFILE_PATH
 export GENMKFILE_ROOT_DIR
 
 include $(GENMKFILE_PATH)/makefile-full
+
+install-fix:
+	echo '#! /bin/sh' > $(DESTDIR)/bin/makefix
+	echo "sed -i 's|/usr/share/genmkfile|$$DESTDIR/share/genmkfile|g' Makefile" >> $(DESTDIR)/bin/makefix
+	chmod +x $(DESTDIR)/bin/makefix
