@@ -64,7 +64,7 @@ grade: devel
 confinement: strict
 
 parts:
-  genmkfile:
+  agenmkfile:
     source: https://github.com/Whonix/genmkfile.git
     source-subdir: "."
     plugin: make
