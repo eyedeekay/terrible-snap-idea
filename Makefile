@@ -14,7 +14,7 @@ copy-snap:
 install-deb:
 	apt-get install -y ./*.deb
 
-GENMKFILE_PATH ?= /usr/share/genmkfile
+GENMKFILE_PATH ?= $(DESTDIR)/share/genmkfile
 GENMKFILE_ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
 export GENMKFILE_PATH
