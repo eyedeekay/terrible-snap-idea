@@ -110,7 +110,7 @@ parts:
       - .
     prime:
       - .
-    install: sh -c makefix
+
   anon-icon-pack:
     after: [desktop-gtk3, genmkfile, whobrowser]
     source: https://github.com/Whonix/anon-icon-pack.git
@@ -124,7 +124,7 @@ parts:
       - .
     prime:
       - .
-    install: sh -c makefix
+
   tb-updater:
     after: [desktop-gtk3, genmkfile, whobrowser]
     source: https://github.com/Whonix/tb-updater.git
@@ -138,7 +138,7 @@ parts:
       - .
     prime:
       - .
-    install: sh -c makefix
+
   tb-starter:
     after: [desktop-gtk3, genmkfile, whobrowser]
     source: https://github.com/Whonix/tb-starter.git
@@ -152,7 +152,7 @@ parts:
       - .
     prime:
       - .
-    install: sh -c makefix
+
   tb-default-browser:
     after: [desktop-gtk3, genmkfile, whobrowser]
     source: https://github.com/Whonix/tb-default-browser.git
@@ -166,7 +166,7 @@ parts:
       - .
     prime:
       - .
-    install: sh -c makefix
+
   open-link-confirmation:
     after: [desktop-gtk3, genmkfile, whobrowser]
     source: https://github.com/Whonix/open-link-confirmation.git
@@ -180,4 +180,3 @@ parts:
       - .
     prime:
       - .
-    install: sh -c makefix
