@@ -156,7 +156,7 @@ parts:
       - .
   whobrowser:
     after: [desktop-gtk3]
-    source: https://github.com/eyedeekay/terrible-snap-idea.git
+    source: https://github.com/eyedeekay/whobrowser.git
     source-subdir: "."
     plugin: make
     make-parameters:
