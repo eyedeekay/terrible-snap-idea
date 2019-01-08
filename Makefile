@@ -17,7 +17,7 @@ install-deb:
 	apt-get install -y ./*.deb
 
 whonix:
-	gpg --quick-generate-key user
+	gpg
 	apt-key --keyring $(DESTDIR)/etc/apt/trusted.gpg.d/whonix.gpg adv --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA
 	echo "deb http://deb.whonix.org stretch main" | tee $(DESTDIR)/etc/apt/sources.list.d/whonix.list
 
