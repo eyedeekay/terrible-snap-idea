@@ -70,7 +70,7 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
-      - DESTDIR=$SNAPCRAFT_PART_INSTALL
+      - DESTDIR=$SNAP
       - install
     stage:
       - .
