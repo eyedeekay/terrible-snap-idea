@@ -75,6 +75,7 @@ parts:
     stage-packages:
       - dirmngr
       - gpgv
+      - gpg-bash-lib
       - devscripts
     stage:
       - .
