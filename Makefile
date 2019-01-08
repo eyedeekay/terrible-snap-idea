@@ -24,7 +24,7 @@ sid:
 	#apt-key --keyring /etc/apt/trusted.gpg.d/sid.gpg adv --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 7638D0442B90D010
 	#echo "deb http://deb.debian.org/debian sid main" | tee /etc/apt/sources.list.d/sid.list
 
-
 install: whonix sid
 	apt-get update
-	apt-get install -y tb-starter tb-updater tb-default-browser open-link-confirmation
+	apt-get install -y tb-starter tb-updater tb-default-browser open-link-confirmation; true
+
