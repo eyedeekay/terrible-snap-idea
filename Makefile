@@ -16,11 +16,15 @@ copy-snap:
 install-deb:
 	apt-get install -y ./*.deb
 
-install:
+whonix:
 	apt-key --keyring /etc/apt/trusted.gpg.d/whonix.gpg adv --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA
 	echo "deb http://deb.whonix.org stretch main" | tee /etc/apt/sources.list.d/whonix.list
+
+sid:
 	#apt-key --keyring /etc/apt/trusted.gpg.d/sid.gpg adv --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 7638D0442B90D010
 	#echo "deb http://deb.debian.org/debian sid main" | tee /etc/apt/sources.list.d/sid.list
+
+
+install: whonix sid
 	apt-get update
-	adduser user
 	apt-get install -y tb-starter tb-updater tb-default-browser open-link-confirmation
