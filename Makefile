@@ -22,4 +22,5 @@ install:
 	#apt-key --keyring /etc/apt/trusted.gpg.d/sid.gpg adv --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 7638D0442B90D010
 	#echo "deb http://deb.debian.org/debian sid main" | tee /etc/apt/sources.list.d/sid.list
 	apt-get update
+	adduser user
 	apt-get install -y tb-starter tb-updater tb-default-browser open-link-confirmation
