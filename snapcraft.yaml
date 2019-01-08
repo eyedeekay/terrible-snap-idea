@@ -72,6 +72,10 @@ parts:
     make-parameters:
       - DESTDIR=$(SNAP)
       - install
+    stage-packages:
+      - dirmgr
+      - gnupg2
+      - devscripts
     stage:
       - .
     prime:
