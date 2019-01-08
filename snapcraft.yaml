@@ -70,7 +70,7 @@ parts:
     source-subdir: "."
     plugin: make
     make-parameters:
-      - DESTDIR=$SNAP
+      - DESTDIR=$(SNAP)
       - install
     stage:
       - .
